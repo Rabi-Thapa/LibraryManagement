@@ -1,0 +1,65 @@
+//		try (BufferedReader bufReader = new BufferedReader(new FileReader(fileName))) {
+//		
+//	        String line;
+//	        while ((line = bufReader.readLine()) != null) {
+//	            String[] parts = line.split(",");
+//	            if (parts.length == 4) {
+//	            	userid = Integer.parseInt(parts[0]);
+//	                username = parts[1];
+//	                password= parts[2];
+//	                admin= Boolean.parseBoolean(parts[3]);
+//	                
+//	                User user = new User(userid,username, password, admin);
+//	                userlist.add(user);
+//	            } else {
+//	                System.out.println("Invalid line format: " + line);
+//	            }
+//	        }
+//	      iterator = userlist.iterator();
+//          while (iterator.hasNext()) {
+//              User user = iterator.next();
+//              System.out.println(user);
+//          }
+//	    } catch (IOException e) {
+//	        e.printStackTrace();
+//	    }
+
+
+
+=============================================       Code2       =======================================
+
+
+//		boolean found= false;
+//		System.out.println("Enter age to search: ");
+//		int a= s.nextInt();
+//		try(BufferedReader bufReader= new BufferedReader(new FileReader(fileName))){
+//			String line;
+//			while((line=bufReader.readLine())!= null) {
+//				 String[] parts = line.split(",");
+//				 if (parts.length == 4) {
+//		            	userid = Integer.parseInt(parts[0]);
+//		                username = parts[1];
+//		                password= parts[2];
+//		                admin= Boolean.parseBoolean(parts[3]);
+//		                
+//		                User user = new User(userid,username, password, admin);
+//		                userlist.add(user);
+//				 } else{
+//	                System.out.println("Invalid line format: " + line);
+//	            }
+//			}
+//			iterator= userlist.iterator();
+//			while(iterator.hasNext()) {
+//			  User user = iterator.next();
+//			  if(user.userid==a) {
+//				  System.out.println(user);
+//				  found= true;
+//			  }
+//			}
+//			if(!found) {
+//				System.out.println("Record Not found");
+//			}
+//			
+//		}catch(IOException e) {
+//			e.printStackTrace();
+//		}

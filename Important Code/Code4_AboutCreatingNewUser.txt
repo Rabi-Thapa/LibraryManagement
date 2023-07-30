@@ -1,0 +1,45 @@
+//		ActionListener createAccountListener= new ActionListener() {
+//			@Override
+//			public void actionPerformed(ActionEvent e) {
+//		        String userIdText = idT.getText();
+//				name= usernameT.getText();
+//				password= passwordT.getText();
+//				
+//				if(adminBtn.isSelected()) {
+//					admin= true;
+//				}else if(userBtn.isSelected()) {
+//					admin= false;
+//				}
+//				
+//				if (userIdText.isEmpty() || name.isEmpty() || password.isEmpty()) {
+//		            JOptionPane.showMessageDialog(c, "Please fill in all the fields.");
+//		            return;
+//		        }
+//				
+//				try {
+//		            id = Integer.parseInt(userIdText);
+//		        } catch (NumberFormatException ex) {
+//		            JOptionPane.showMessageDialog(c, "Invalid ID. Please enter a valid integer value.");
+//		            return;
+//		        }
+//				
+//				userlist.add(new Admin(id, name, password, admin));
+//				try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true))) {
+//					for(Admin line: userlist) {
+//						writer.write(line.id+"%"+line.name+"%"+line.password+"%"+line.admin);
+//						writer.newLine();
+//					}
+//					JOptionPane.showMessageDialog(c, "New Account has been created successfully.");
+//				}
+//			
+//				catch(IOException ex) {
+//					
+//					JOptionPane.showMessageDialog(c, "Error occured!");
+//				}
+//				
+//				idT.setText("");
+//				usernameT.setText("");
+//				passwordT.setText("");
+//				group.clearSelection();
+//			}
+//		};
