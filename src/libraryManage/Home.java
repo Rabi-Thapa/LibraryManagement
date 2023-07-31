@@ -75,7 +75,6 @@ public class Home {
 		};
 		adminBtn.addActionListener(loginBtnListener);
 		librarianBtn.addActionListener(loginBtnListener);
-		
 	}
 	
 	public static void main(String [] args) {
