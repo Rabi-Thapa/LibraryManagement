@@ -58,7 +58,7 @@ public class Admin
 //		frame.add(p2);
 		
 		p2= new JPanel(null);
-		p2.setBackground(new Color(144, 122, 80));
+		p2.setBackground(new Color(109, 136, 202));
 		p2.setBounds(40, 140, 510, 310);
 		frame.add(p2);
 		
