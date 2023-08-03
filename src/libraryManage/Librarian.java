@@ -609,9 +609,7 @@ public class Librarian {
 				dueDateT.setDate(null);
 			}
 		};
-
 		issueBookBtn.addActionListener(issueBookListener);
-
 	}
 
 	void returnBook() {

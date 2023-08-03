@@ -78,6 +78,17 @@ public class Admin
 		viewLibrarianBtn.setFocusable(false);
 		p2.add(viewLibrarianBtn);
 		
+		JButton deleteLibrarianBtn= new JButton("Delete Librarian");
+		deleteLibrarianBtn.setFont(new Font("Consolas", Font.BOLD, 12));
+		deleteLibrarianBtn.setBounds(180, 160, 160, 50);
+		deleteLibrarianBtn.setBackground(Color.white);
+		deleteLibrarianBtn.setForeground(Color.black);
+		deleteLibrarianBtn.setFocusable(false);
+		p2.add(deleteLibrarianBtn);
+		
+		
+		
+		
 		JButton backBtn= new JButton("<Back");
 		backBtn.setBounds(10, 10, 100, 30);
 		backBtn.setBackground(Color.green);
@@ -97,6 +108,10 @@ public class Admin
 				case"View Librarian":
 					showUser();
 					break;
+					
+				case"Delete Librarian":
+					deleteAdmin();
+					break;
 				
 				case"<Back":
 					frame.setVisible(false);
@@ -106,6 +121,7 @@ public class Admin
 		};
 		createAccountBtn.addActionListener(buttonListener);	
 		viewLibrarianBtn.addActionListener(buttonListener);
+		deleteLibrarianBtn.addActionListener(buttonListener);
 		backBtn.addActionListener(buttonListener);
 	}
 	
@@ -204,8 +220,6 @@ public class Admin
 		c.add(backBtn);
 		
 		
-
-		
 		ActionListener createAccountListener= new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -262,6 +276,12 @@ public class Admin
     public String toString() {
         return "User [userid=" + id + ", username=" + name + ", password=" + password + ", admin="+admin+"]";
     }
+	
+	
+	
+	
+	
+	
 	
 	void showUser() {
 		JFrame frame2= new JFrame("USER DETAILS");
@@ -326,6 +346,65 @@ public class Admin
 		}
     }
 	
+	void deleteAdmin(){
+		JFrame frame3= new JFrame("Delete Record");
+		frame3.setBounds(340, 140, 600, 300);
+		frame3.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame3.setVisible(true);
+		
+		boolean found= false;
+		
+		Font fo1, fo2, fo3;
+		fo1 = new Font("Consolas", Font.BOLD, 30);
+		fo2 = new Font("Verdana", Font.BOLD, 16);
+		fo3 = new Font("Consolas", Font.BOLD, 16);
+
+		
+		Container c = frame3.getContentPane();
+		c.setLayout(null);
+
+		JLabel lblRemvLibrarian = new JLabel("Remove Admin");
+		lblRemvLibrarian.setFont(fo1);
+		lblRemvLibrarian.setBounds(200, 25, 300, 40);
+		frame3.add(lblRemvLibrarian);
+
+		JLabel adminidL = new JLabel("Id: ");
+		adminidL.setBounds(100, 90, 200, 28);
+		adminidL.setFont(fo2);
+
+		JTextField adminidT = new JTextField();
+		adminidT.setBounds(230, 90, 260, 28);
+		adminidT.setFont(fo3);
+		adminidT.setForeground(Color.blue);
+		c.add(adminidL);
+		c.add(adminidT);
+
+		JLabel passwordL = new JLabel("Password: ");
+		passwordL.setBounds(100, 140, 200, 28);
+		passwordL.setFont(fo2);
+
+		JTextField passwordT = new JTextField();
+		passwordT.setBounds(230, 140, 260, 28);
+		passwordT.setFont(fo3);
+		passwordT.setForeground(Color.blue);
+		c.add(passwordL);
+		c.add(passwordT);
+
+		JButton deleteBtn = new JButton("Delete");
+		deleteBtn.setBounds(230, 190, 120, 40);
+		deleteBtn.setBackground(Color.blue);
+		deleteBtn.setForeground(Color.white);
+		deleteBtn.setFocusable(false);
+		c.add(deleteBtn);
+
+		JButton backBtn = new JButton("<Back");
+		backBtn.setBounds(10, 10, 100, 30);
+		backBtn.setBackground(Color.green);
+		backBtn.setForeground(Color.black);
+		backBtn.setFocusable(false);
+		c.add(backBtn);
+		
+	}
 	void search() {
 		boolean found= false;
 		File file= new File(fileName);
