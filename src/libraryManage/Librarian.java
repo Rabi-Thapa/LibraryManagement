@@ -338,8 +338,7 @@ public class Librarian {
 
 		frame2.add(scroll);
 		frame2.setVisible(true);
-		
-	
+
 		JButton backBtn = new JButton("<Back");
 		backBtn.setBackground(Color.green);
 		backBtn.setForeground(Color.black);
@@ -508,13 +507,14 @@ public class Librarian {
 					bookid = Integer.parseInt(bookidText);
 					userid = Integer.parseInt(useridText);
 				} catch (NumberFormatException nfe) {
+					JOptionPane.showMessageDialog(c, "Please enter a valid values.");
 					nfe.printStackTrace();
 				}
 
 				bookname = "";
 
 				int bid = 0;
-				int bquantity=0;
+				int bquantity = 0;
 				String bname = null;
 				String bauthor = null;
 				String bgenre = null;
@@ -693,7 +693,7 @@ public class Librarian {
 				int bid = 0;
 				String bname;
 				int uid = 0;
-				String uname=null;
+				String uname = null;
 				String isDate = null;
 				String duDate = null;
 				boolean isBReturn;
@@ -738,14 +738,15 @@ public class Librarian {
 							bid = Integer.parseInt(token.nextToken());
 							bname = token.nextToken();
 							uid = Integer.parseInt(token.nextToken());
-							uname= token.nextToken();
+							uname = token.nextToken();
 							isDate = token.nextToken();
 							duDate = token.nextToken();
 							isBReturn = Boolean.parseBoolean(token.nextToken());
 							if ((bookid == bid) && (userid == uid)) {
 								isBReturn = true;
 							}
-							writer.write(bid + "%" + bname + "%" + uid + "%" +uname+"%"+ isDate + "%" + duDate + "%" + isBReturn);
+							writer.write(bid + "%" + bname + "%" + uid + "%" + uname + "%" + isDate + "%" + duDate + "%"
+									+ isBReturn);
 							writer.newLine();
 
 						}
